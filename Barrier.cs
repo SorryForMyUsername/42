@@ -27,18 +27,12 @@ namespace Barrier
             Console.ResetColor();
         }
 
-        public void GenerateEvent(int number)
+        public void GenerateEvent(int eventNumber)
         {
-            Random rnd = new Random(number);
-
-            int randomEvent = rnd.Next(2);
-            if(randomEvent == 1)
+            switch (eventNumber)
             {
-                Event1();
-            }
-            else
-            {
-                Event2();
+                case 1: Event1(); break;
+                case 2: Event2(); break;
             }
         }
     }

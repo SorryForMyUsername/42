@@ -14,14 +14,15 @@ namespace Barrier
             Barrier.Event1 += barrier.Event1Handler;
             Barrier.Event2 += barrier.Event2Handler;
 
-            for (int i = 0; i < 10; i++)
+            Random rnd = new Random();
+            for (int i = 1; i <= 10; i++)
             {
-                Man man = new Man((i + 1).ToString());
+                Man man = new Man(i.ToString());
 
                 Barrier.Event1 += man.Event1Handler;
                 Barrier.Event2 += man.Event2Handler;
 
-                barrier.GenerateEvent(i);
+                barrier.GenerateEvent(rnd.Next(1, 3));
             }
 
             Console.ReadKey(true);

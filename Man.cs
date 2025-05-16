@@ -19,7 +19,7 @@ namespace Barrier
 
         public void Event1Handler()
         {
-            Console.WriteLine($"{Name} человек, иду.");
+            Console.WriteLine($"Человек {Name}, иду.");
 
             Barrier.Event1 -= Event1Handler;
             Barrier.Event2 -= Event2Handler;
@@ -27,7 +27,7 @@ namespace Barrier
 
         public void Event2Handler()
         {
-            Console.WriteLine($"{Name} человека, стою.");
+            Console.WriteLine($"Человек {Name}, стою.");
         }
     }
 }
